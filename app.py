@@ -20,7 +20,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key' 
 
 # Função para conectar ao HANA Cloud
-
+# OK
 # Rota principal
 @app.route('/')
 def index():
