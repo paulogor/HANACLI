@@ -1,0 +1,4 @@
+Python App ──(POST credentials)──▶ OAuth Server (e.g., SAP BTP XSUAA)
+             ◀─(access_token)────
+
+Python App ──(GET API + Bearer token)──▶ Protected API (e.g., Datasphere OData)

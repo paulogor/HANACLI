@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Tabelas do SAP Datasphere{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="mb-4">SAP Datasphere POC - Python</h1>
+
+        <h5>Schema: <span class="text-primary">{{ request.args.get('schema', 'default') }}</span></h5>
+
+        {% if tabelas %}
+            <ul class="list-group mt-4">
+                {% for row in tabelas %}
+                    <li class="list-group-item">
+                        <a href="/tabelas/{{ row[0] }}" class="text-decoration-none">
+                            {{ row[0] }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <div class="alert alert-warning mt-4">Nenhuma tabela encontrada.</div>
+        {% endif %}
+    </div>
+{% endblock %}

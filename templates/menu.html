@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Select Datasphere Datamodel to see data</h2>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="{{ url_for('model') }}?odata_url=https://crl-np-dsp.us10.hcs.cloud.sap/api/v1/dwc/consumption/relational/INITIAL/GV_REPLICON_UNION/GV_REPLICON_UNION?$top=10">top 10 GV_REPLICON_UNION</a>
+        </li>
+        <li class="list-group-item">
+            <a href="{{ url_for('model') }}?odata_url=https://crl-np-dsp.us10.hcs.cloud.sap/api/v1/dwc/consumption/relational/INITIAL/GV_WF_Summary/GV_WF_Summary?$top=10">Top 10 GV_WF_Summary</a>
+        </li>
+        <li class="list-group-item">
+            <a href="{{ url_for('model') }}?odata_url=https://example.com/odata/modelB">Modelo B</a>
+        </li>
+        <li class="list-group-item">
+            <a href="{{ url_for('model') }}?odata_url=https://example.com/odata/modelC">Modelo C</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

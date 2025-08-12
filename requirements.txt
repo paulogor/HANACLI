@@ -1,0 +1,6 @@
+Flask
+hdbcli
+python-dotenv
+requests
+pandas
+openpyxl
